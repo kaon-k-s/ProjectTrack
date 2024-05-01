@@ -1,0 +1,273 @@
+
+body {
+    font-family: "Lucida Console", Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/*Set page layuot*/
+#grid-container {
+    display: grid;
+    height: 100dvh;
+    grid-template-columns: 15fr 70fr 15fr;
+    grid-template-rows: 10fr 90fr;
+}
+#grid-container div, #newProjectWindow {
+    padding: 15px;
+    margin: 0px;
+    text-align: center;
+}
+#projtrack {
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: #4E7D7C;
+    color: #A89190;
+    font-weight: bold;
+    font-size: 1.5em;   
+    text-align: right;    
+}
+
+.logoDecor {
+    border-left: 10px dashed #A89190;
+    border-top: 10px dashed #352838;
+    height: 90%;
+    width: 90%;
+}
+
+div#projtrack .logoDecor {
+    text-align: left;
+    padding-bottom: 0;
+}
+
+#projnameHeader {
+    flex-grow: 8;
+    flex-shrink: 1;
+    background-color: #352838;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.75em;
+    color: #FEFCFA;          
+}
+div#projnameHeader {
+    padding-top: 45px;
+    padding-bottom: 0;
+}
+
+#profile {
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: #4E7D7C; 
+}
+div#profile {
+    text-align: left;
+    padding-bottom: 0;
+}
+
+#projmanage {
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: #A89190;
+}
+div#projmanage {
+    text-align: right;
+}
+
+#workflow {
+    flex-grow: 8;
+    flex-shrink: 1;
+    background-color: #FEFCFA;
+}
+#workflow h2 {
+    font-size: 1em;
+    border-bottom: 5px dashed #352838;;
+    margin-top: 0;
+}
+#workflow div {
+    padding: 0;
+}
+#statproj {
+    flex-grow: 1;
+    flex-shrink: 0;
+    background-color: #352838;
+    color: #FEFCFA;  
+}
+
+#profileNotLogged {
+    display: none;
+}
+
+/*Animation for page appearance*/
+@keyframes animatePage {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.75;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pageAnimation {
+    animation: animatePage 1s;
+}
+
+/*Animation for pop-ups appearance*/
+@keyframes animatetop {
+    0% {
+        top: -300px;
+        opacity: 0;
+    }
+    75% {
+        top: 25dvh;
+    }
+    100% {
+        top: 15dvh;
+        opacity: 1;
+    }
+}
+
+/*Pop-up styles*/
+.popUps {
+    display: none;
+    position: absolute;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 20px;
+    top: 15dvh;
+    height: 65dvh;
+    width: 50dvw;
+    animation: animatetop 0.5s;
+    box-shadow: 0 4px 10px 0 #352838, 0 4px 20px 0 #352838;
+    background-color: #352838;
+    color: #FEFCFA;
+}
+.popUps h3 {
+    border-bottom: 5px dashed #FEFCFA;
+    padding-bottom: 5px;
+}
+
+.closePopUp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+/*Buttons, inputs, lists styles*/
+button, input[type=submit] {
+    border-width: 0px;
+    border-radius: 30px;
+    padding: 10px 15px;
+    background-color: #FEFCFA;
+    color: #352838;
+    font-family: "Lucida Console", Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #5e4663;;
+    color: #FEFCFA;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+input {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+/*Circle related styles*/
+svg {
+    height: 700px;
+    width: 800px;
+}
+
+/*Slice borders*/
+path {
+    fill: transparent;
+    stroke: #FEFCFA;
+}
+
+/*Styles for random color selection for slices in js*/
+path.colorPath1 {
+    fill: palevioletred;
+}
+path.colorPath2 {
+    fill: #c51e00;
+}
+path.colorPath3 {
+    fill: purple
+}
+path.colorPath4 {
+    fill: #4E7D7C; 
+}
+path.colorPath5 {
+    fill: #9A3C3E;
+}
+path.colorPath6 {
+    fill: #f08c00;
+}
+path.colorPath7 {
+    fill: #A3797E;
+}
+path.colorPath8 {
+    fill: #46C0A1;
+}
+path.colorPath9 {
+    fill: #C90852;
+}
+path.colorPath10 {
+    fill: #2A735F;
+}
+path.colorPath11 {
+    fill: #1100ff;
+}
+path.colorPath12 {
+    fill: #7d3110;
+}
+path.colorPath13 {
+    fill: #4c0d7e;
+}
+path.colorPath14 {
+    fill: #CCCE30;
+}
+path.colorPath15 {
+    fill: #4dacab;
+}
+path.colorPath16 {
+    fill: #2B584B;
+}
+path.colorPath17 {
+    fill: #832034;
+}
+path.colorPath18 {
+    fill: #455A1B;
+}
+path.colorPath19 {
+    fill: #668D16;
+}
+path.colorPath20 {
+    fill: #579491;
+}
+
+text {
+    fill: #1a131b;
+}
+
+circle {
+    fill: #FEFCFA;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Track</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div id="grid-container" class="pageAnimation">
+        <div id="projtrack"><div class="logoDecor">Project Track</div></div>
+        <div id="projnameHeader">Project Name</div>
+
+         <!--My profile menu (right). If A user isn't logged in, login and sign uo options wiil be shown-->
+        <div id="profile">
+            <ul id="profileNotLogged">
+                <li><button type="button">Login</button></li>
+                <li><button type="button">Sign up</button></li>
+            </ul>
+            <ul id="profileLogged">
+                <li><button type="button">My Profile</button></li>
+                <li><button type="button">My projects</button></li>
+            </ul>
+        </div>
+
+        <!--Project manage menu (left)-->
+        <div id="projmanage">
+            <ul>
+                <li><button type="button" id="newProjectButton">New Project</button></li>
+                <li><button type="button" id="seeProjectsButton">Projects</button></li>
+                <li><button type="button" id="seeTeamButton">Team</button></li>
+            </ul>
+        </div>
+        <div id="workflow">
+            <h2>Workflow</h2>
+            <div>
+                <!--Circle elements are added by js here-->
+                <svg viewBox="0 0 110 110" id="pieProj"></svg>
+            </div>
+        </div>
+        <div id="statproj">Project Statistics</div>
+    </div>
+
+    <!--A pop-up with the form for a new project setup insereted by js-->
+    <div id="toInputPopUp"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
