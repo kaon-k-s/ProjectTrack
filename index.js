@@ -105,7 +105,7 @@ function Launch() {
         if (slices > 1) {
             createPie(cx, cy, r, slices);
         } else {
-            alert("Please add at least two project parts");
+            alert("Please add at least two project parts AND specify their names.");
         }
     }
 }
